@@ -1,4 +1,10 @@
 #pragma once
+
 class Ship {
+private:
+    int _length;
 public:
-    int length = 1;
+    Ship();
+    explicit Ship(int length);
+    int get_length() const;
+};

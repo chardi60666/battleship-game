@@ -1,5 +1,9 @@
 #pragma once
+
+#include <string>
+
 class GameField {
 public:
-    bool is_valid() const { return true; }
+    GameField();
+    std::string to_string(bool hide_ships) const;
 };
