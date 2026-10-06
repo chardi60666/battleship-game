@@ -34,9 +34,9 @@ public:
     void col(int c);
     void col(char c);
 
-    friend bool parse(const std::string& str, Position& pos);
-    friend bool is_collision(int val) TEST_2;
-    friend bool is_collision(char c) TEST_2;
+     bool parse(const std::string& str, Position& pos);
+     bool is_collision(int val) TEST_2;
+     bool is_collision(char c) TEST_2;
 
     TEST_1
 };
