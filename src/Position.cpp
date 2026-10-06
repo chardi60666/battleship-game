@@ -54,21 +54,21 @@ Position::Position(int r, char c) {
 
 Position::Position(const std::string& str) {
     if (!parse(str, *this)) {
-        throw std::logic_error("Invalid input: incorrect position");
+        throw std::invalid_argument("Invalid input: incorrect position");
     }
 }
 
 void Position::row(int r) {
-    if (is_collision(r)) throw std::logic_error("Invalid input: incorrect position");
+    if (is_collision(r)) throw std::invalid_argument("Invalid input: incorrect position");
     _row = r;
 }
 
 void Position::col(int c) {
-    if (is_collision(c)) throw std::logic_error("Invalid input: incorrect position");
+    if (is_collision(c)) throw std::invalid_argument("Invalid input: incorrect position");
     _col = c;
 }
 
 void Position::col(char c) {
-    if (is_collision(c)) throw std::logic_error("Invalid input: incorrect position");
+    if (is_collision(c)) throw std::invalid_argument("Invalid input: incorrect position");
     _col = std::toupper(static_cast<unsigned char>(c)) - 'A' + 1;
 }
